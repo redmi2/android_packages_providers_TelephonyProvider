@@ -29,7 +29,7 @@
                  android:allowBackup="false"
                  android:label="@string/app_label"
                  android:icon="@mipmap/ic_launcher_phone"
-                 android:usesCleartextTraffic="false">
+                 android:usesCleartextTraffic="true">
 
         <provider android:name="TelephonyProvider"
                   android:authorities="telephony"
@@ -79,5 +79,9 @@
                   android:singleUser="true"
                   android:multiprocess="false"
                   android:writePermission="android.permission.MODIFY_PHONE_STATE" />
+
+        <provider android:name="CdmaCallOptionProvider"
+                  android:authorities="cdma"
+                  android:exported="true" />
     </application>
 </manifest>
